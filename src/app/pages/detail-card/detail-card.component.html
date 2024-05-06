@@ -1,0 +1,82 @@
+<section class="content-body d-flex flex-column min-vh-100">
+
+     
+        <div class="row">
+            <div class="col-lg-1">
+
+                <ul class="list-unstyled">
+                    <li>
+                        <div class="cuadros mb-2"> <img [src]="detainfo.images" class="figure-img img-fluid rounded" width="50px" height="50px"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <div class="imagen">
+                    <img [src]="detainfo.images" class="figure-img img-fluid rounded">
+                </div>
+              
+            </div>
+
+            <div class="col-lg-3">
+
+                <ul class="list-unstyled">
+    
+                  <li><h3>{{detainfo.title  }}</h3></li>
+                  <li>RECOMENDADO          
+                    <div class="star-rating">
+                    <a href="#">★</a>
+                    <a href="#">★</a>
+                    <a href="#">★</a>
+                    <a href="#">★</a>
+                    <a href="#">★</a>
+                    </div>
+</li>
+                  <li>{{detainfo.price}}</li>
+                  <li><a class="dinerito">{{detainfo.price}} OFF</a></li>
+                  <li>Capacidad:{{detainfo.cantidad}}</li>
+                  <li><button type="button" class="btn btn-outline-secondary">{{detainfo.cantidad}} GB</button> </li>
+                  <li>Color:Blanco  </li>
+                  <li> <strong class="title">{{detainfo.descripcion}}</strong></li>
+                  <li>Resolucion:{{detainfo.resolution}}</li>
+                  <li>Memoria RAM de {{detainfo.cantidad}}.</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="marco ps-3 pe-2 py-2">
+                <ul class="list-unstyled">
+    
+                  <li><h5>Envío gratis a todo el país</h5></li>
+                  <li><small class="title">Conoce los tiempos y las formas de envío.</small></li>
+                  <li><strong>Stock disponible</strong></li>
+                  <li class="mb-2">Cantidad:1 unidad(+50 disponibles)</li>
+                  <li class="mb-5">Capacidad:512 GB</li>
+                  <li class="text center"><button class="btn btn-primary mb-3" style="width:200px;">Comprar ahora</button></li>
+                  <li><button class="btn btn-primary mb-3" 
+                              style="width:200px;"
+                              (click)="sendata(detainfo.id)"
+                             >Agregar al carrito</button></li>
+                  <li>
+                    <p class="title lh-1">
+                    Vendido por nene
+                    <br>
+                    Devolución gratis. Tienes 30 días desde que lo recibes.
+                  </p></li>
+                  <li> 
+                    <p class="title lh-1">
+                        Compra ProtegidaSe abrirá en una nueva ventana, recibe el producto que esperabas o te devolvemos tu dinero.
+                    </p>
+                   </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <div class="d-flex justify-content-start">
+             <button class="btn btn-primary"
+                     (click)="back()">Regreso</button>
+        </div>
+</section>

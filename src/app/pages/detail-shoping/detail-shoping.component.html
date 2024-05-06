@@ -1,0 +1,117 @@
+<section class="content-body d-flex flex-column min-vh-100">
+
+        <div class="row justify-content-md-center">
+            <div class="col-lg-9">
+                <div class="marco">
+                 <h6 class="ms-3">{{detainfo.title}}</h6>
+                 <hr>
+                 <div class="px-3 py-3">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img [src]="detainfo.images" width="100" height="100">
+                        </div>
+                        <div class="col-lg-4">
+                          {{detainfo.title}}
+                            <br>
+                            <small>{{detainfo.descripcion}}</small>
+                        </div>
+                        <div class="col">   
+                            <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="d-flex justify-center">
+                                    <div class="marco" style="width:100px;">    
+                                        <span class="ms-2 me-3 ">-</span>
+                                        <span class="ms-3 me-3 ">2</span>
+                                        <span class="ms-2 me-3 ">+</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <small>{{detainfo.cantidad}} Disponibles</small>
+                        </div>
+                        <div class="col">
+                            <h3>{{detainfo.price}}</h3>
+                        </div>
+                     </div>
+                 </div>
+                 <hr>
+                 <div class="row ms-3">
+                    <div class="col-lg-6 mb-2">Envio</div>
+                    <div class="col-lg-6 mb-2">{{detainfo.price}}  - $ 8.840</div>
+                 </div>
+                 <div class="mt-2 info" style="background-color:#D3D2D2; height: 30px;">
+                    Agrega $ 6.300 en productos del vendedor para conseguir envío gratis. 
+                </div>
+                </div>
+         
+            </div>
+            <div class="col-lg-3">
+                <div class="marco mb-4">
+                  <h5 class="ms-3">Resumen de compra</h5>
+                <hr>
+                <ul class="list-unstyled ms-3">
+                    <li>Productos (1):{{detainfo.price}}</li>
+                    <li>Envío:</li>
+                    <li>Total:{{detainfo.price}}</li>
+                    <li><button 
+                        class="btn btn-primary mt-4 mb-4"
+                        (click)="changeStatus()"
+                        >Continuar Compra</button></li>
+                </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mt-3" *ngIf="data">
+            <div class="col-9">
+                <div class="marco pb-3">
+ 
+                    
+                      <div class="d-flex justify-content-between px-3">
+                        <h4>Enviar a domicilio</h4>
+                        <h4>$.8000</h4>
+                    </div>  
+                    <hr>
+                    <strong class="ms-3" style="color: #5773ED;">Editar o elegir otro domicilio</strong>
+                </div>
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <div class="row mt-3" *ngIf="data">
+            <div class="col-9">
+                <div class="marco pb-3">
+                    
+                      <div class="d-flex justify-content-between px-3 pt-3">
+                        <h5>Retirar en un punto de entrega</h5>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    </div>  
+                </div>
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+        <div class="row mt-3" *ngIf="data">
+            <div class="col-7">
+
+            </div>
+            <div class="col-2">
+                <button type="button" 
+                        class="btn btn-primary btn-lg"
+                        
+                        >Continuar</button>
+            </div>
+        </div>
+
+        
+        <div class="d-flex justify-content-start mt-5">
+            <button class="btn btn-primary"
+                    (click)="back()">Regreso</button>
+       </div>
+
+</section> 

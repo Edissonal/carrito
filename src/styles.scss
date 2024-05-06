@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+.footer {
+    background: #212529;
+    min-height: 50px;
+    font-family: CalibriRegular !important;
+
+
+    .subtitle {
+        font-family: 'Montserrat-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 17px;
+        letter-spacing: 0.05em;
+        margin-left: 32px;
+        margin-right: 32px;
+        color: #FFFFFF;
+    }
+
+    label {
+        font-family: 'Montserrat-Regular';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        margin-left: 32px;
+        color: #E6E4E3;
+    }
+
+    hr {
+        width: 100%;
+        border: 1px solid #E6E4E3;
+
+    }
+
+}
+
+
+.marco{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    margin: 5px,5px,5px,5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+.info{
+    border-radius: 0px 0px 5px 5px;
+    padding-left: 30px;
+}

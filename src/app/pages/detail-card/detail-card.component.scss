@@ -1,0 +1,64 @@
+.cuadros{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    width: 48px;
+    height: 48px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.imagen{
+    height:500px;
+    left: 50px;
+    min-height: 500px;
+    padding: 16px;
+    top: 0;
+    width: 410px;
+}
+
+.star-rating {
+    $size: 20px;
+    $normal: #95A5A6;
+    $selected: #F39C12;
+    
+    display: inline-block;
+    
+    a {
+      float: right;
+      width: $size;
+      height: $size;
+      line-height: $size;
+      font-size: $size;
+      color: $normal;
+      text-decoration: none;
+      text-align: center;
+      transition: color .3s;
+      
+      &:hover {
+        color: $selected;
+        
+        & ~ a {
+          color: $selected;
+        }
+      }
+    }
+  
+  }
+
+
+  .dinerito{
+    font-family: arial !important;
+    text-decoration: none !important;
+    size: 40px !important;
+    cursor: pointer;
+}
+
+
+.title{
+font-size: 15px !important;
+color: #95A5A6;
+}
+.marco{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  margin: 5px,5px,5px,5px;
+  border-radius: 5px 5px 5px 5px;
+}
+

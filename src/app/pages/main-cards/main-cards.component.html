@@ -1,0 +1,78 @@
+
+
+<section class="content-body d-flex flex-column min-vh-100">
+  <form   (ngSubmit)="searchata()" 
+          [formGroup]="search"
+         >
+  <div class="row justify-content-md-center">
+    <div class="col-lg-3">
+      <label class="form-label">Buscar termino</label>
+      <input type="text" 
+             class="form-control"
+             formControlName="dato"
+             [class.is-invalid]="camposvalidos('dato')"
+             >
+             <div
+             *ngIf="camposvalidos('dato')"
+             class="form-text text-danger animate__animated animate__fadeIn animate__fast"
+           >
+                 Campo Invalido
+           </div>
+    </div>
+    <div class="col-lg-3">
+      <label class="form-label">Precio</label>
+      <select class="form-select"
+      formControlName="precios"
+      [class.is-invalid]="camposvalidos('precios')" 
+      #price         
+      (change)="datafilter(price.value)"    
+          >
+        <option *ngFor="let preci of precios">{{preci}}</option>
+      </select>
+    </div>
+
+    <div class="col-lg-3">
+      <label class="form-label">Categoria</label>
+      <select class="form-select"
+      formControlName="categorias"
+      [class.is-invalid]="camposvalidos('categorias')"
+      #categori
+      (change)="changeCategory(categori.value)"
+          >
+        <option *ngFor="let cate of categorias">{{cate}}</option>
+      </select>
+    </div>
+    <div class="col-lg-3">
+      
+      <button class="btn btn-primary" style="margin-top: 30px;">Buscar</button>
+      
+    </div>
+  </div>
+</form>
+
+  <div class="row mt-5">
+    <div class="col-lg-4 mb-4" *ngFor="let item of datalist">
+      <div class="card text-center" style="width: 18rem;">
+        <div class="text-center">
+          <img [src]="item.imagen" class="rounded mt-2"  width="150px" height="150px">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text lh-sm">
+            {{item.descripcion}}
+            <br>
+            Precio:${{item.precio}}
+            <br>
+            Categoria:{{item.area}}
+          </p>
+          <p class="card-text"><small class="text-muted"></small></p>
+          <a class="btn btn-primary" (click)="Redirect(item.id)">Detalles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
